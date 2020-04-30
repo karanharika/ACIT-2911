@@ -14,7 +14,7 @@
 	display: block;
 	position: relative;
 	float: left;
-	margin: 4px;
+	margin: 5px;
 	overflow: hidden;
 	-webkit-box-shadow: 0 8px 6px -6px black;
 	-moz-box-shadow: 0 8px 6px -6px black;
@@ -333,5 +333,7 @@
 #amazingaudioplayer-1 .amazingaudioplayer-tracklistsearch-input {
 	box-sizing: border-box;
 	width: 100%;
-}
-
+}
+
+
+
