@@ -16,8 +16,7 @@
 	float: left;
 	margin: 0;
 	overflow: hidden;
-	/* original
-	-webkit-box-shadow: 0 8px 6px -6px black;
+	/* -webkit-box-shadow: 0 8px 6px -6px black;
 	-moz-box-shadow: 0 8px 6px -6px black;
 	box-shadow: 0 8px 6px -6px black; */
 	-webkit-border-radius: 4px;
@@ -34,8 +33,7 @@
 	text-align: left;
 	overflow: hidden;
 	padding: 0 0 0 8px;
-	/* original
-	padding: 4px 12px; */
+	/* padding: 4px 12px; */
 	height: auto;
 }
 
