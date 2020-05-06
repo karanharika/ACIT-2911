@@ -44,7 +44,7 @@
 
 #amazingaudioplayer-1 .amazingaudioplayer-title {
 	display: block;
-	color: #333;
+	color: rgb(233, 233, 233);
 	font-family: "Oswald",Arial,sans-serif;
 	font-size: 20px;
 	font-weight: bold;
@@ -55,7 +55,7 @@
 
 #amazingaudioplayer-1 .amazingaudioplayer-info {
 	display: block;
-	color: #666;
+	color: rgb(155, 155, 155);
 	font-family: Arial, sans-serif;
 	font-size: 12px;
 	font-style: italic;
