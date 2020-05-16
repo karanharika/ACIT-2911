@@ -37,7 +37,3 @@ Player.prototype.stop = function() {
   this.isStopped = true;
 };
 
-
-Player.prototype.makeFavorite = function() {
-  this.currentlyPlayingSong.persistFavoriteStatus(true);
-};
