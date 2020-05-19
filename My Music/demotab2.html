@@ -86,10 +86,39 @@ h1{
     <!-- End of body section HTML codes -->
 </div>
 <div style="background-color: rgb(0, 0, 0); width: fit-content; color: blanchedalmond;">
-    <form >
-        <input type="file" id="myFile" name="filename">
-        <input type="submit">
+    <form name="form" method="post" action="upload.php" enctype="multipart/form-data" >
+        <input type="file" name="my_file" />
+        <input type="submit" name="submit" value="Upload"/>
     </form>
 </div>
+<!-- 
+
+<script>
+    
+    document.getElementById('myFile').onchange = function () {
+        let fulldata = this.value;
+        console.log(fulldata);
+        let songName = fulldata.substr(12);
+        console.log(songName);
+        nameOnly = "";
+        counter = 0;
+
+        while(counter < songName.length){
+            if (songName[counter] === "_"){
+                break;
+            }
+            else{
+                nameOnly.concat(songName[counter]);
+            }
+            console.log(nameOnly);
+            counter++;
+        }
+
+        console.log('Selected file: ' + this.value);
+        };
+
+      
+
+</script> -->
 </body>
 </html>
