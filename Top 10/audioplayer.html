@@ -1,123 +1,115 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
     <meta name="viewport" content="width=device-width">
-    <title>LilMusicano - Top 10</title>
-    <link rel="icon" href="../musicicon.png">
+    <title>LilMusicano - Mymusic</title>
+    <link rel="icon" href="../musicicon.png">    
 
     <!-- Insert to your webpage before the </head> -->
-    <!-- Referencing needed resources -->
     <script src="audioplayerengine/jquery.js"></script>
     <script src="audioplayerengine/amazingaudioplayer.js"></script>
-    <link rel="stylesheet" type="text/css" href="audioplayerengine/initaudioplayer-1.css">
-    <script src="audioplayerengine/initaudioplayer-1.js"></script>
+    <link rel="stylesheet" type="text/css" href="audioplayerengine/initaudioplayer-2.css">
+    <script src="audioplayerengine/initaudioplayer-2.js"></script>
     <!-- End of head section HTML codes -->
     <style>
-        body {
-            background: #000000 url(audio/assassins_creed_revelations_logo-wallpaper-2560x1440.jpg) no-repeat left top;
-            background-size: cover;
-        }
+        body{
+        background: #000000 url(audio/the_witcher_3_wild_hunt_geralt_of_rivia_2-wallpaper-3840x2160.jpg) no-repeat left top;
+        background-size: cover;
+    }
+    .btn-group button {
+  background-color: rgb(0, 255, 242); /* Green background */
+  border: 1px solid rgb(236, 236, 236); /* Green border */
+  color: rgb(0, 0, 0); /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+  font-family:fantasy;
+}
 
-        .btn-group button {
-            background-color: rgb(0, 255, 242);
-            /* Green background */
-            border: 1px solid rgb(236, 236, 236);
-            /* Green border */
-            color: rgb(0, 0, 0);
-            /* White text */
-            padding: 10px 24px;
-            /* Some padding */
-            cursor: pointer;
-            /* Pointer/hand icon */
-            float: left;
-            /* Float the buttons side by side */
-            font-family: fantasy;
-        }
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
 
-        .btn-group button:not(:last-child) {
-            /* Prevent double borders */
-            border-right: none;
-        }
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
-        /* Clear floats (clearfix hack) */
-        .btn-group:after {
-            content: "";
-            clear: both;
-            display: table;
-        }
-
-        /* Add a background color on hover */
-        .btn-group button:hover {
-            background-color: #fa0068;
-        }
-
-        h1 {
-            font-family: fantasy;
-            color: maroon;
-        }
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #fa0068;
+}
+h1{
+    text-align: center;
+    font-family: fantasy;
+    color: rgb(255, 0, 98);
+}
     </style>
-    <<<<<<< HEAD=======>>>>>>> HTML/CSS-(Design)
 </head>
 
-<body style="background-image:src=audio/assassins_creed_revelations_logo-wallpaper-2560x1440;">
-    <h1 style="text-align: center;">Top 10</h1>
+<body style="background-color:black;">
+    <h1>My Music</h1>
 
+    <!-- Four buttons in a group -->
     <div class="btn-group" style="width:100%">
-        <a href="../homepage.html">
-            <button style="width:33.33%">Home</button>
-        </a>
-        <a href="../My Music/audioplayer.html">
-            <button style="width:33.33%">My Music</button>
-        </a>
-        <button style="width:33.33%">Top 10</button>
 
-        <<<<<<< HEAD </div>
-            <div style="margin:12px auto;">
+    <a href="../homepage.html">
+    <button style="width:33.33%">Home</button>
+    </a>
 
-                =======
-            </div>
-            <div style="margin:10px auto;">
+    <button style="width:33.33%">My Music</button>
+    
+    <a href="../Top 10/audioplayer.html">
+    <button style="width:33.33%">Top 10</button>
+    </a>
+    
+    </div>
+<div style="margin:10px auto;">
+    
+    <!-- Insert to your webpage where you want to display the audio player -->
+    <div id="amazingaudioplayer-2" style="display:block;position:relative;width:100%;height:auto;margin:0px auto 0px;">
+        <ul class="amazingaudioplayer-audios" style="display:none;">
+            <li data-artist="Roddy Ricchi" data-title="The BoX" data-album="Album" data-info="" data-image="" data-duration="197">
+                <div class="amazingaudioplayer-source" data-src="audio/The_Box.mp3" data-type="audio/mpeg" ></div>
+            </li>
+            <li data-artist="NseeB" data-title="Listen Up" data-album="Album" data-info="" data-image="" data-duration="239">
+                <div class="amazingaudioplayer-source" data-src="audio/Listen%20Up%20%5BExplicit%5D%28VVIPJatt.Com%29.mp3" data-type="audio/mpeg" ></div>
+            </li>
+            <li data-artist="Sidhu Mossewala ft. NseeB" data-title="Old Skool" data-album="Brown Boys" data-info="" data-image="" data-duration="259">
+                <div class="amazingaudioplayer-source" data-src="audio/Old%20Skool%20Ft.%20Sidhu%20Moose%20Wala%20-%20Prem%20Dhillon%20%28DjPunjab.Com%29.mp3" data-type="audio/mpeg" ></div>
+            </li>
+           
+        </ul>
+        
+    </div>
+    <!-- End of body section HTML codes -->
+    <div id="uploadSongs" style="background-color: rgb(0, 0, 0); width: fit-content; color: blanchedalmond;">
+        <form >
+            <label for="songName">Enter Song Name Here:</label><br>
+            <input type="text" id="songName" name="songName" value="Enter Here"><br>
+            <!-- <input type="submit" value="Submit"> -->
+          </form>
+    
+        <form name="form" method="post" action="./upload.php" enctype="multipart/form-data" >
+            <input type="file" name="my_file" />
+            <input type="submit" name="submit" value="Upload"/>
+        </form>
+        <!-- <div>
+            <button onclick="songUpdater()">Update Playlist</button>
+        </div> -->
+    </div>
+</div>
 
-                >>>>>>> HTML/CSS-(Design)
-                <!-- Insert to your webpage where you want to display the audio player -->
-                <div id="amazingaudioplayer-1"
-                    style="display:block;position:relative;width:100%;height:auto;margin:0px auto 0px;">
-                    <ul class="amazingaudioplayer-audios" style="display:none;">
-                        <li data-artist="Roddy Rich" data-title="The BoX" data-album="Album" data-info="" data-image=""
-                            data-duration="197">
-                            <div class="amazingaudioplayer-source" data-src="audio/The_Box.mp3" data-type="audio/mpeg">
-                            </div>
-                        </li>
-                        <li data-artist="Sidhu Moosewala ft. NseeB" data-title="Old Skool" data-album="Brown Boys"
-                            data-info="" data-image="" data-duration="259">
-                            <div class="amazingaudioplayer-source"
-                                data-src="audio/Old%20Skool%20Ft.%20Sidhu%20Moose%20Wala%20-%20Prem%20Dhillon%20%28DjPunjab.Com%29.mp3"
-                                data-type="audio/mpeg"></div>
-                        </li>
-                        <li data-artist="NseeB" data-title="Listen Up" data-album="" data-info="" data-image=""
-                            data-duration="239">
-                            <div class="amazingaudioplayer-source"
-                                data-src="audio/Listen%20Up%20%5BExplicit%5D%28VVIPJatt.Com%29.mp3"
-                                data-type="audio/mpeg"></div>
-                        </li>
-                        <li data-artist="NseeB" data-title="Soul Talk" data-album="Soul Talk The closet(VVIPJatt.Com)"
-                            data-info="" data-image="" data-duration="221">
-                            <div class="amazingaudioplayer-source"
-                                data-src="audio/Soul%20Talk%20The%20closet%28VVIPJatt.Com%29.mp3"
-                                data-type="audio/mpeg"></div>
-                        </li>
-                        <li data-artist="NseeB" data-title="Stacks" data-album="" data-info="" data-image=""
-                            data-duration="214">
-                            <div class="amazingaudioplayer-source" data-src="audio/Stacks%20Nseeb.mp3"
-                                data-type="audio/mpeg"></div>
-                        </li>
+<script>
+  
 
-                    </ul>
-                </div>
-                <!-- End of body section HTML codes -->
-            </div>
+// let dat = document.querySelector("#amazingaudioplayer-2 > div:nth-child(5) > a");
+// let data = dat.getAttribute("href");
+// console.log(data);
+
+</script>
 </body>
-
 </html>
