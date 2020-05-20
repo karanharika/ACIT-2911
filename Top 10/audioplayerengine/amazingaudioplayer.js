@@ -9,7 +9,7 @@ this.isSafari()&&this.safariVersion()>=11},applyBrowserStyles:function(object,ap
 (function($){$.fn.amazingaudioplayer=function(options){var amEscapeHtml=function(str){var tag=document.createElement("div");tag.innerHTML=str;return tag.innerText.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#039;")};var PlayerSkin=function(amazingPlayer,container,options,id){this.amazingPlayer=amazingPlayer;this.options=options;this.id=id;this.container=container;this.playerwrapper=$("<div class='amazingaudioplayer-player-wrapper'></div>");
 this.playerwrapper.appendTo(this.container);this.volumeSaved=1;var instance=this;var isTouch="ontouchstart"in window;var eStart=isTouch?"touchstart mousedown":"mousedown";var eMove=isTouch?"touchmove mousemove":"mousemove";var eCancel=isTouch?"touchcancel mouseup":"mouseup";var formatSeconds=function(secs){var hours=Math.floor(secs/3600),minutes=Math.floor(secs%3600/60),seconds=Math.ceil(secs%3600%60);if(instance.options.customtimestyle)return instance.options.timestyle.replace("%HOURS%",hours).replace("%MINUTES%",
 minutes).replace("%SECONDS%",seconds);else return(hours==0?"":hours>0&&hours.toString().length<2?"0"+hours+":":hours+":")+(minutes.toString().length<2?"0"+minutes:minutes)+":"+(seconds.toString().length<2?"0"+seconds:seconds)};if(this.options.showbackgroundimage)this.playerwrapper.css({"background-image":'url("'+this.options.backgroundimage+'")'});if(this.options.showimage){this.$image=$("<div class='amazingaudioplayer-image'></div>");this.$image.appendTo(this.playerwrapper);this.$image.css({width:this.options.imagefullwidth?
-"100%;":this.options.imagewidth+"px",height:this.options.imageheight+"px",display:"block"});this.container.on("amazingaudioplayer.updateinfo",function(event,data){if(data.image.length>0)instance.$image.html("<div class='amazingaudioplayer-image-space' style='display:inline-block;vertical-align:middle;height:100%;'></div><img alt='"+amEscapeHtml(data.title)+"' src='"+data.image+"' style='width:100%;max-width:100%;vertical-align:middle;' />");else instance.$image.empty()});this.playerwrapper.append("<div class='amazingaudioplayer-image-clear'></div>")}if(this.options.showtitle||
+"100%;":this.options.imagewidth+"px",height:"300px",display:"block"});this.container.on("amazingaudioplayer.updateinfo",function(event,data){if(data.image.length>0)instance.$image.html("<div class='amazingaudioplayer-image-space' style='display:inline-block;vertical-align:middle;height:100%;'></div><img alt='"+amEscapeHtml(data.title)+"' src='"+data.image+"' style='width:100%;max-width:100%;vertical-align:middle;' />");else instance.$image.empty()});this.playerwrapper.append("<div class='amazingaudioplayer-image-clear'></div>")}if(this.options.showtitle||
 this.options.showinfo){this.$text=$("<div class='amazingaudioplayer-text'></div>");this.$text.appendTo(this.playerwrapper);if(this.options.showtitle){this.$title=$("<div class='amazingaudioplayer-title'></div>");this.$title.appendTo(this.$text);this.container.on("amazingaudioplayer.updateinfo",function(event,data){var t=instance.options.titleformat.replace(/%TITLE%/g,data.title);t=t.replace(/%ALBUM%/g,data.album);t=t.replace(/%ARTIST%/g,data.artist);t=t.replace(/%INFO%/g,data.info);t=t.replace(/%DURATION%/g,
 duration);t=t.replace(/%ID%/g,data.id);if(data.source.length>0){t=t.replace(/%AUDIO%/g,data.source[0].src);t=t.replace(/%AUDIOURL%/g,data.source[0].src)}instance.$title.html(t)});this.$text.append("<div class='amazingaudioplayer-title-clear'></div>")}if(this.options.showinfo){this.$info=$("<div class='amazingaudioplayer-info'></div>");this.$info.appendTo(this.$text);this.container.on("amazingaudioplayer.updateinfo",function(event,data){var duration=data.duration?formatSeconds(data.duration):"";var t=
 instance.options.infoformat.replace(/%TITLE%/g,data.title);t=t.replace(/%ALBUM%/g,data.album);t=t.replace(/%ARTIST%/g,data.artist);t=t.replace(/%INFO%/g,data.info);t=t.replace(/%DURATION%/g,duration);t=t.replace(/%ID%/g,data.id);if(data.source.length>0){t=t.replace(/%AUDIO%/g,data.source[0].src);t=t.replace(/%AUDIOURL%/g,data.source[0].src)}instance.$info.html(t)});this.$text.append("<div class='amazingaudioplayer-info-clear'></div>")}this.playerwrapper.append("<div class='amazingaudioplayer-text-clear'></div>")}var $bar=
@@ -164,21 +164,3 @@ declStr,mediaStr,newStyleBoolean)},addDomLoadEvent:addDomLoadEvent,addLoadEvent:
 getElementById(EXPRESS_INSTALL_ID);if(obj&&storedAltContent){obj.parentNode.replaceChild(storedAltContent,obj);if(storedAltContentId){setVisibility(storedAltContentId,true);if(ua.ie&&ua.win)storedAltContent.style.display="block"}if(storedCallbackFn)storedCallbackFn(storedCallbackObj)}isExpressInstallActive=false}}}};
 
 
-let links = document.getElementsByTagName('a');
-
-for (let link of links){
-    let hrefValue = link.getAttribute("href");
-    console.log(1);
-    console.log(hrefValue);
-    if (hrefValue.indexOf("http://amazingaudioplayer.com") >=0){
-        // link.style.textDecoration = 'None';
-        console.log("Got that bitch");
-    } 
-}
-
-let oldComponent = document.getElementById("")
-let newDiv = document.createElement("div"); 
-// and give it some content 
-let newContent = document.createTextNode("Enjoy the Music!!"); 
-//  add the text node to the newly created div
-  newDiv.appendChild(newContent);  
